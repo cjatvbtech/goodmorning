@@ -1,0 +1,159 @@
+/*
+ * Header Actions
+ */
+.actions {
+    list-style: none;
+    padding: 0;
+    z-index: 3;
+    margin: 0;
+
+    & > li {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        margin-right: 5px;
+        font-family: $gothambold;
+        color: $black;
+        &:last-child { margin-right: 0; }
+    }
+
+    & > li > a,
+    & > a {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        text-align: center;
+        padding-top: 8px;
+        color: $black;
+
+        & > i { font-size: 24px; }
+
+        &:hover {
+            & > i {
+                color: #000;
+            }
+        }
+
+        @include hover-pop(rgba(0,0,0,0.15), 50%, 0);
+
+        &.w-text {
+            display: inline-block;
+            width: auto;
+            padding-left: 10px;
+            padding-right: 10px;
+            @include border-radius(5px);
+
+            i { 
+                float: left; 
+                margin-right: 8px; 
+                font-size: 16px;
+                line-height: 20px;
+            }
+            i.zcaret {
+                margin-right: 0;
+                margin-left: 8px;
+                float: right;
+            }
+            span {
+                line-height: 20px;
+                color: #455a64;
+                font-weight: bold;
+            }
+            &:before {
+                @include border-radius(5px);
+            }
+
+            &:hover span {
+                color: #000;
+            }
+
+             @media (max-width: 767px) {
+                display: block;
+                padding: 0;
+                @include border-radius(50%);
+
+                &:hover {
+                    background-color: $blue;
+                    i { color: #fff; }
+                }
+
+
+                i { 
+                    font-size: 20px; 
+                    text-align: center;
+                    margin-right: 0;
+                }
+                span { display: none; }
+            }
+        }
+    }
+
+    & > li.open,
+    &.open {
+        & > a {
+            & > i {
+                color: #000;
+            }
+
+            &:before {
+                @include scale(1);
+                @include opacity(1);
+            }
+        }
+    }
+
+    &.actions-alt {
+        & > li {
+            & > a > i {
+                color: #fff;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+
+            &.open {
+                & > a {
+                    & > i {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    &.open {
+        z-index: 3;
+    }
+}
+
+
+.member-menu {
+    .sub-menu {
+        padding-top: 20px;
+        padding-bottom: 15px;
+
+        > li > a {
+            position: relative;
+            padding: 10px 15px 10px 40px;
+
+            > i {
+                font-size: 20px;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                margin-top: -20px;
+                height: 40px;
+                line-height: 40px;
+                width: 40px;
+                text-align: center;
+            }
+
+            &.person-avatar {
+                height: 75px;
+                width: 75px;
+                padding: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,126 @@
+.sprite {
+    background-image: url('../images/sprites.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+
+    &.db-ico {
+        margin-top: -25px;
+        margin-left: -25px;
+    }
+
+    &.assets-ico {
+        @include bg-pos(49px, 49px, 0 0);
+    }
+
+    &.liabilities-ico {
+        @include bg-pos(49px, 49px, -57px 0);
+    }
+
+    &.stockholders-ico {
+        @include bg-pos(49px, 49px, -115px 0);
+    }
+
+    &.revenue-ico {
+        @include bg-pos(49px, 49px, -173px 0);
+    }
+
+    &.expenses-ico {
+        @include bg-pos(49px, 49px, -230px 0);
+    }
+
+    &.on-bording-ico {
+        @include bg-pos(49px, 49px, -286px 0);
+    }
+
+    &.clients-ico {
+        margin-left: -37px;
+        @include bg-pos(49px, 74px, 0 -55px);
+    }
+
+    &.inbox-ico {
+        @include bg-pos(49px, 49px, -81px -55px);
+    }
+
+    &.downloads-ico {
+        @include bg-pos(49px, 49px, -133px -53px);
+    }
+
+    &.my-account-ico {
+        margin-left: -27px;
+        @include bg-pos(49px, 53px, -184px -52px);
+    }
+
+    &.login-avatar-ico {
+        margin-top: 31px;
+        @include bg-pos(49px, 49px, -244px -57px);
+    }
+
+    &.printer-ico {
+        @include bg-pos(37px, 39px, -101px -107px);
+    }
+
+    &.forward-ico {
+        @include bg-pos(33px, 35px, -60px -110px);
+    }
+
+    &.calendar-ico {
+        @include bg-pos(24px, 26px, -29px -113px);
+        margin-top: 4px;
+    }
+
+    &.headphone-ico {
+        @include bg-pos(20px, 21px, 0 -114px);
+    }
+
+    &.close-white-ico {
+        @include bg-pos(12px, 12px, -145px -114px);
+    }
+
+    &.app-header-menu {
+        @include bg-pos(30px, 30px, -301px -64px);
+    }
+
+    &.main-nav-ico-assets {
+        @include bg-pos(30px, 30px, -1px -157px);
+    }
+
+    &.main-nav-ico-liabilities {
+        @include bg-pos(30px, 30px, -31px -157px);
+    }
+
+    &.main-nav-ico-stockholders {
+        @include bg-pos(30px, 30px, -61px -157px);
+    }
+
+    &.main-nav-ico-revenue {
+        @include bg-pos(30px, 30px, -91px -157px);
+    }
+
+    &.main-nav-ico-expenses {
+        @include bg-pos(30px, 30px, -121px -157px);
+    }
+
+    &.main-nav-ico-onboard {
+        @include bg-pos(30px, 30px, -151px -157px);
+    }
+
+    &.main-nav-ico-clients {
+        @include bg-pos(30px, 40px, -181px -157px);
+    }
+
+    &.main-nav-ico-inbox {
+        @include bg-pos(30px, 40px, -221px -157px);
+    }
+
+    &.main-nav-ico-download {
+        @include bg-pos(30px, 30px, -261px -157px);
+    }
+
+    &.main-nav-ico-myaccount {
+        @include bg-pos(30px, 30px, -291px -157px);
+    }
+
+    &.main-nav-ico-home {
+        @include bg-pos(30px, 30px, -321px -157px);
+    }
+}

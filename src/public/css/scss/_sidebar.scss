@@ -1,0 +1,103 @@
+.sidebar {
+	background-color: rgba(0,0,0,0.9);
+	overflow: hidden;
+
+	.close-sidebar-btn {
+		position: absolute;
+		top: 20px;
+		right: 15px;
+		height: 30px;
+		width: 30px;
+		display: block;
+		text-align: center;
+		line-height: 28px;
+
+		@include border-radius(50%);
+		@include hover-pop($lightblue, 50%, 0);
+	}
+
+	&#main-nav {
+		background-color: $menu-bg-color;
+		position: fixed;
+		top: -10px;
+		bottom: -5px;
+		right: -$menu-nav-width;
+		width: $menu-nav-width;
+		z-index: 6;
+		overflow-y: auto;
+		
+		@include transition(200ms all ease-out);
+
+		.inner-content {
+			padding: 40px 20px;
+		}
+
+		.pm-box {
+			padding: 20px 20px 10px;
+			position: relative;
+			text-align: center;
+
+			.person-avatar {
+				background-color: $header-bg-color;
+				height: 90px;
+				width: 90px;
+				line-height: 90px !important;
+				float: none;
+				color: $white;
+				font-size: 36px;
+				margin-bottom: 10px;
+			}
+
+			p {
+				line-height: 1.5em;
+			}
+
+			.btn-logout {
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+		}
+
+		.nav-link-list {
+			padding: 10px 0;
+			margin-left: -20px;
+			margin-right: -20px;
+
+			.nav-item {
+				padding: 0;
+				border-bottom: 1px solid rgba(255,255,255,0.25);
+				&:last-child {
+					border-bottom: 0;
+				}
+			}
+
+			.nav-link {
+				color: $menu-itemlink-color;
+				display: block;
+				padding: 15px 25px 15px 25px;
+
+				&:hover {
+					background-color: rgba(255,255,255,0.25);
+				}
+
+				&.with-ico {
+					position: relative;
+					padding-left: 70px;
+					
+					.ico {
+						position: absolute;
+						top: 50%;
+						margin-top: -15px;
+						left: 20px;
+						height: 30px;
+						width: 40px;
+						display: block;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+
+}

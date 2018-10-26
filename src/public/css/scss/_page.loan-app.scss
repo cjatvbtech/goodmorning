@@ -1,0 +1,109 @@
+.product-list {
+	height: 320px;
+
+	.product-item {
+		width: 255px;
+		min-height: 320px;
+		float: left;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.item-info {
+		text-align: center;
+		padding: 25px 20px 20px;
+
+		p {
+			color: $blue;
+			margin-bottom: 15px;
+		}
+	}
+
+	.item-image {
+    background-size: cover !important;
+	}
+
+	.prod-01 .item-image {
+		background: url('../images/product_001.jpg') no-repeat center center;
+	}
+
+	.prod-02 .item-image {
+		background: url('../images/product_002.jpg') no-repeat center center;
+	}
+
+	.prod-03 .item-image {
+		background: url('../images/product_003.jpg') no-repeat center center;
+	}
+
+	.prod-04 .item-image {
+		background: url('../images/product_004.jpg') no-repeat center center;
+	}
+
+	.prod-05 .item-image {
+		background: url('../images/product_005.jpg') no-repeat center center;
+	}
+
+	.prod-06 .item-image {
+		background: url('../images/product_006.jpg') no-repeat center center;
+	}
+
+	.prod-07 .item-image {
+		background: url('../images/product_007.jpg') no-repeat center center;
+	}
+
+	.prod-08 .item-image {
+		background: url('../images/product_008.jpg') no-repeat center center;
+	}
+}
+
+.prod-demo-image-thumb {
+	background: url('../images/product_001.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+.product-info {
+	h3 {
+		font-family: $gothambold;
+		font-size: 22px;
+		color: $blue;
+		line-height: 1.25em;
+		margin-top: 20px;
+		margin-bottom: 15px;
+	}
+}
+
+.item-price {
+	font-family: $gothambold;
+	font-size: 32px;
+	color: $blue;
+	line-height: 1.25em;
+
+	small {
+		display: block;
+		color: $black;
+		font-size: 14px;
+		line-height: 14px;
+		margin-bottom: 5px;
+	}
+}
+
+.prod-hero {
+	background: url('../images/prod_hero.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+p.tracking-code {
+	text-align: center;
+	font-family: $gothambold;
+	font-size: 35px !important;
+	color: $blue;
+	margin-bottom: 0px;
+}
+
+.upload-note {
+	max-width: 240px;
+	margin: 20px auto 30px;
+	padding-left: 20px;
+}

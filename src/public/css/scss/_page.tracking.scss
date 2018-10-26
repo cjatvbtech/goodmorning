@@ -1,0 +1,27 @@
+.tracking-index {
+	position: relative;
+	> div {
+		float: left;
+		min-height: 320px;
+
+		&.tracking-form {
+			width: 265px;
+
+			@media (min-width: 640px) {
+				.inner-content {
+					padding: 30px;
+				}
+			}
+		}
+
+		&.tracking-hero-image {
+			width: calc(100% - 265px);
+			background: url('../images/portion_bg.jpg') no-repeat right center;
+			background-size: cover;
+
+			@media (min-width: 640px) {
+				min-height: 430px;
+			}
+		}
+	}
+}

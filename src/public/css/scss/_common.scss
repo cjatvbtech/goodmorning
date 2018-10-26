@@ -1,0 +1,418 @@
+.main-container {
+    height: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    @include transition(200ms all ease-out);
+}
+
+div {
+    margin: 0 auto;
+}
+
+footer,
+header,
+main {
+    margin: 0 auto;
+}
+
+a {
+    color: $alink-color;
+    cursor: pointer;
+    -webkit-transition: 300ms all ease-out;
+    transition: 300ms all ease-out;
+
+    &:hover,
+    &:focus {
+        outline: none;
+        color: $font-color-a-hover;
+        text-decoration: none;
+    }
+}
+
+hr {
+    border-top-color: $lightestgray;
+}
+
+.main-content {
+    @media (min-width: 992px) {
+        padding: 35px 0 40px;
+    }
+
+    @media (max-width: 991px) {
+        padding: 20px 0;
+    }
+}
+
+.img-responsive {
+    height: auto;
+    display: block;
+    max-width: 100%;
+}
+
+.inner-wrap {
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @media (max-width: 991px) {
+        padding: 20px 25px 30px;
+    }
+
+    @media (max-width: 360px) {
+        padding: 20px 15px 20px;
+    }
+
+    .sub-full-width {
+        @media (max-width: 991px) {
+            margin-left: -25px;
+            margin-right: -25px;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        @media (max-width: 360px) {
+            margin-left: -15px;
+            margin-right: -15px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    .microsite & {
+        max-width: 840px;
+    }
+}
+
+.bg-green {
+    background-color: #44d569;
+}
+
+.bg-red {
+    background-color: #ea3434;
+}
+
+.person-avatar {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: $btn-bg-color;
+    background-size: cover;
+    padding-top: 2px;
+    height: 60px;
+    width: 60px;
+    line-height: 58px !important;
+    font-size: 24px;
+    overflow: hidden;
+    margin: 0 auto;
+
+    &:before {
+        background-color: transparent;
+    }
+
+    > span.hover-text {
+        display: block;
+        position: absolute;
+        width: 100%;
+        bottom: -25px;
+        left: 0;
+        background-color: rgba(0,0,0,0.3);
+        text-align: center;
+        padding: 4px 5px 7px;
+        font-size: 8px;
+        line-height: 1em;
+
+        @include transition(250ms all ease-out);
+    }
+
+    &:hover > span.hover-text {
+        bottom: 0;
+    }
+}
+
+.lv-divider {
+    border-right: 1px solid #e5e5f0;
+}
+
+.l-h-1 {
+    line-height: 1em !important;
+}
+
+.l-h-125 {
+    line-height: 1.25em !important;
+}
+
+.l-h-15 {
+    line-height: 1.5em !important;
+}
+
+
+/* Font color */
+
+@each $name, $bgcolor in $colors {
+    .c-#{$name} {
+        color: $bgcolor !important;
+    }
+}
+
+/* Background color */
+
+@each $name, $bgcolor in $colors {
+    .bgm-#{$name} {
+        background-color: $bgcolor !important;
+    }
+}
+
+.has-warning {
+    background-color: rgba(248, 182, 20, 0.1);
+    padding: 15px 25px;
+    &,
+    >* {
+        font-size: 11px;
+    }
+}
+
+.pos-rel {
+    position: relative !important;
+}
+
+.pos-abs {
+    position: absolute !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.d-i-block {
+    display: inline-block !important;
+}
+
+.d-table {
+    display: table !important;
+}
+
+.d-tblcell {
+    display: table-cell !important;
+
+    &.add-on {
+        width: 1%;
+        line-height: 12px;
+    }
+}
+
+.cur-pointer {
+    cursor: pointer;
+}
+
+.text-overflow {
+    @include text-overflow();
+}
+
+@media (min-width: 1200px) {
+    .text-right-lg {
+        text-align: right;
+    }
+
+    .text-center-lg {
+        text-align: center;
+    }
+
+    .text-overflow-lg {
+        @include text-overflow();
+    }
+}
+
+@media (min-width: 992px) {
+    .text-right-md {
+        text-align: right;
+    }
+    .text-center-md {
+        text-align: center;
+    }
+
+    .text-overflow-md {
+        @include text-overflow();
+    }
+}
+
+@media (min-width: 768px) {
+    .text-right-sm {
+        text-align: right;
+    }
+    .text-center-sm {
+        text-align: center;
+    }
+
+    .text-overflow-sm {
+        @include text-overflow();
+    }
+}
+
+@media (max-width: 767px) {
+    .text-right-xs {
+        text-align: right;
+    }
+    .text-center-xs {
+        text-align: center;
+    }
+
+    .text-overflow-xs {
+        @include text-overflow();
+    }
+}
+
+@media (max-width: 991px) and (min-width: 561px) {
+    .col-xxs-6 {
+        width: 50%;
+        float: left;
+    }
+
+    .col-xxs-4 {
+        width: 33.33%;
+        float: left;
+    }
+
+    .col-xxs-3 {
+        width: 25%;
+        float: left;
+    }
+}
+
+.no-border {
+    border: 0 !important;
+}
+
+.row-xl {
+    margin-left: -25px;
+    margin-right: -25px;
+
+    >div {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+.row-md {
+    margin-left: -10px;
+    margin-right: -10px;
+
+    >div {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.row-sm {
+    margin-left: -8px;
+    margin-right: -8px;
+
+    > div {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+.row-xs {
+    margin-left: -5px;
+    margin-right: -5px;
+
+    > div {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+.row-xxs {
+    margin-left: -2.5px;
+    margin-right: -2.5px;
+
+    > div {
+        padding-left: 2.5px;
+        padding-right: 2.5px;
+    }
+}
+
+.tbl-like {
+    display: table;
+    width: 100%;
+
+    >.tbl-cell {
+        display: table-cell;
+
+        &.tbl-addon {
+            width: 1%;
+        }
+
+        &:not(:first-child) {
+            padding-left: 10px;
+        }
+
+        &:not(:last-child) {
+            padding-right: 10px;
+        }
+    }
+}
+
+.no-border {
+    border: 0 !important;
+}
+
+.b-top {
+    border-top: 1px solid $lightestgray;
+}
+
+.b-bottom {
+    border-bottom: 1px solid $lightestgray;
+}
+
+.b-left {
+    border-left: 1px solid $lightestgray;
+}
+
+.b-right {
+    border-right: 1px solid $lightestgray;
+}
+
+.b-right-blue {
+    border-right: 1px solid $lightblue;
+}
+
+
+.w-100-perc {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.w-50 {
+    width: 50px !important;
+}
+
+.w-75 {
+    width: 75px !important;
+}
+
+.w-100 {
+    width: 100px !important;
+}
+
+.w-125 {
+    width: 125px !important;
+}
+
+.w-150 {
+    width: 150px !important;
+}
+
+.m-auto {
+    margin: 0 auto;
+}
+
+.circle {
+    @include border-radius(50%);
+}
+

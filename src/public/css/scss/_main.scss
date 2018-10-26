@@ -1,0 +1,120 @@
+body {
+	background-color: #fff;
+	max-width: 100%;
+	overflow: hidden;
+	height: 100vh;
+	z-index: 21;
+	@include transition(250ms transform ease-out);
+
+	&.menu-open {
+		@include transform(translateX(-$menu-nav-width));
+
+		.main-container { 
+			overflow-y: hidden;
+		}
+	}
+}
+
+#main-content {
+	padding: 40px 0;
+}
+
+#main {
+	position: relative;
+	z-index: 7;
+	margin-top: -$headerMaxheight;
+	margin-bottom: -$footerMaxheight;
+	min-height: 100%;
+
+	&:before {
+		content: " ";
+		display: block;
+		padding-top: $headerMaxheight;
+	}
+
+	&:after {
+		content: " ";
+		display: block;
+		padding-top: $footerMaxheight;
+	}
+
+	.inner-wrap {
+		@media (min-width: 992px) {
+			padding-top: 20px;
+			padding-bottom: 60px;
+	    }
+	}
+
+	.microsite & {
+		margin-top: -170px;
+
+		&:before {
+			height: 170px;
+		}
+	}
+
+	h2 {
+		margin-top: 10px;
+	}
+}
+
+.inner-content {
+	padding: 20px;
+}
+
+.card {
+	border: 1px solid $lightestgray;
+	margin-bottom: 40px;
+
+	&.card-rounded {
+		@include border-radius(5px);
+		overflow: hidden;
+	}
+
+	.card-header {
+		font-size: 16px;
+		text-transform: uppercase;
+		color: $lightblue;
+		padding: 7px 15px 7px;
+		position: relative;
+
+		h2, h3 {
+			color: $white;
+			text-transform: none;
+			margin: 0 auto;
+		}
+
+		h2 {
+			font-size: 18px;
+		}
+
+		h3 {
+			font-size: 16px;
+		}
+	}
+
+	> .card-body {
+		padding: 30px 20px;
+		@media (min-width: 992px) {
+			min-height: 345px;
+		}
+
+		hr {
+			border-color: $lightestgray;
+			margin-left: -20px;
+			margin-right: -20px;
+		}
+
+		a:hover, a:focus { color: $lightblue; }
+	}
+}
+
+.personal-loan-app {
+	background: url('../images/personal-loan-bg.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.company-loan-app {
+	background: url('../images/company-loan-bg.jpg') no-repeat center center;
+  background-size: cover;
+}

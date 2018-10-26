@@ -1,0 +1,33 @@
+.input-group-addon {
+    border: 1px solid $lightestgray;
+    background-color: $lightestgray;
+
+    @include border-radius(0);
+
+    &.has-control {
+        border-bottom:0;
+    }
+}
+
+.row-min {
+	margin-left: -3px;
+	margin-right: -3px;
+	> div {
+		padding-left: 3px;
+		padding-right: 3px;
+	}
+}
+
+.fade {
+    @include transition(opacity 0.2s ease-out);
+}
+
+.no-gutters {
+    margin-left: 0;
+    margin-right: 0;
+
+    > *[class^="col-"] {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

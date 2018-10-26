@@ -1,0 +1,104 @@
+body {
+    font-family: $font-face;
+    font-size: $font-size;
+	color: $font-color;
+}
+
+h1 {
+	font-family: $gothammedium;
+	font-size: 3em;
+	margin: 0 auto 10px;
+	color: $lightblue;
+	line-height: 1.25em;
+
+	&.content-header {
+		position: relative;
+		text-align: center;
+		margin-bottom: 35px;
+
+		&:before {
+			content: " ";
+			background-color: $lightblue;
+			display: block;
+			width: 26px;
+			height: 3px;
+			position: absolute;
+			top: -2px;
+			left: 50%;
+			margin-left: -13px;
+		}
+	}
+
+	@media (max-width: 991px) {
+	    font-size: 2.5em;
+	}
+
+	@media (max-width: 767px) {
+	    font-size: 2em;
+	}
+}
+
+h2 {
+	font-family: $gothambold;
+	font-size: 1.25em;
+	color: $black;
+	margin-bottom: 1.25em;
+	text-align: center;
+
+	@media (max-width: 991px) {
+	    font-size: 1.75em;
+	}
+	@media (max-width: 767px) {
+	    font-size: 1.5em;
+	}
+}
+
+h3 {
+	font-family: $gothammedium;
+	font-size: 1.5em;
+	color: $darkgray;
+	line-height: 1.5em;
+	margin-bottom: 40px;
+}       
+
+h4 {
+	font-size: 12px;
+	font-weight: normal;
+	color: $lightblue;
+	margin-bottom: 25px;
+}
+
+.f-reg {
+	font-weight: 400;
+}
+
+h1, h2, h3, h4 {
+    small {
+        display: block;
+        color: #636370;
+        font-size: 75%;
+        line-height: 2.5em;
+    }
+}
+
+strong, b {
+	font-family: $gothambold;
+	font-weight: normal;
+}
+
+p {
+	line-height: 1.5em;
+	font-size: $p-fsize;
+	color: $gray;
+	@media (min-width: 992px) {
+		margin-bottom: 25px;
+	}
+	@media (max-width: 991px) {
+		margin-bottom: 20px;
+	}
+	
+}
+
+.f-medium {
+	font-family: $gothammedium;
+}

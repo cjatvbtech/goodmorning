@@ -1,0 +1,130 @@
+.login-content {
+    overflow: hidden;
+    height: 100% !important;
+    max-width: 1200px;
+    position: relative;
+
+    @media (max-width: 1200px) {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    @media (min-width: 768px) {
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-top: 50px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        header {
+            margin:  20px auto 30px;
+        }
+    }
+}
+
+.lc-block {
+    background: rgba(255,255,255,0.6);
+    width: 370px;
+    display: inline-block;
+    margin-top: 42px;
+    vertical-align: middle;
+    position: relative;
+
+    @include border-radius(5px);
+    @include box-shadow(0px 3px 5px 3px rgba(0,0,0,0.1));
+    
+    &:not(.lcb-alt) {
+        padding: 30px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 15px 35px 25px 20px;
+        width: 100%;
+    }
+
+    .checkbox {
+        margin: 5px 0 0 42px;
+        text-align: left; 
+    }
+
+    &:not(.lcb-alt) {
+        .btn-login {
+            top: 50%;
+            margin-top: -25px; 
+            right: -25px; 
+        }
+    }
+
+    .lc-avatar {
+        background-color: $blue;
+        height: 112px;
+        width: 112px;
+        @include border-radius(50%);
+        margin-top: -85px;
+        line-height: 112px;
+    }
+
+    .contact-support {
+        position: absolute;
+        width: 100%;
+        bottom: -80px;
+        left: 0;
+    }
+}
+ 
+.lcb-alt {
+    padding: 70px 55px 60px;
+    
+    .btn-login {
+        bottom: -25px;
+        left: 50%;
+        margin-left: -25px;
+    }
+    
+    .login-navigation {
+        bottom: -75px;
+    }
+}
+
+.lcb-user {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    margin-left: -50px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.login-content {
+    text-align: right;
+    
+    @media (max-width: 768px) {
+        text-align: center;
+    }
+
+    @media (min-width: 768px) {
+        &:after {
+            content: "";
+            vertical-align: middle; 
+            display: inline-block;
+            width: 1px;
+            height: 100%;
+        }
+        
+        &:before {
+            height: 50%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            z-index: 0;
+        }
+    }
+}

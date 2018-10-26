@@ -1,0 +1,108 @@
+#header {
+	&:not(.microsite) {
+        background-color: $header-bg-color;
+    	position: relative;
+    	height: $headerMaxheight;
+    	z-index: 10;
+    	color: #fff;
+    }
+
+    &.microsite {
+        padding-top: 50px;
+    }
+
+    body:not(#dashboard) & {
+        border-bottom: 1px solid $yellow;
+    }
+
+    body.microsite & {
+        border-bottom: 0 !important;
+    }
+
+    h1 {
+        float: left;
+        margin-top: 30px;
+        margin-bottom: 0;
+        color: $yellow;
+        font-size: 32px;
+    }
+
+    .main-logo {
+        float: left;
+        position: relative;
+        overflow: hidden;
+        span {
+            position: absolute;
+            top: 0;
+            left: 1000%;
+        }
+    }
+
+	.top-menu {
+        display: block;
+        float: right;
+
+        > li {
+            display: block;
+            vertical-align: middle;
+            padding: 5px 20px;
+            border-right: 1px solid rgba(255, 255, 255, 0.25);
+            float: left;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+                border-right: 0;
+            }
+
+            .badge {
+                position: absolute;
+                top: -8px;
+                right: -8px;
+                width: 25px;
+                height: 25px;
+                line-height: 24px;
+                font-size: 10px;
+                padding: 0;
+                border: 1px solid $white;
+            }
+
+            .dropdown-menu>li>a:not(.btn):focus, 
+            .dropdown-menu>li>a:not(.btn):hover {
+                background-color: lighten($yellow, 25%);
+            }
+        }
+		@media (min-width: 768px) {
+			padding: 15px 0 0;
+		}
+		a:not(.btn) {
+			color: $white;
+		}
+        .btn-hover:focus {
+            background-color: transparent;
+        }
+		@media (min-width: 768px) {
+
+		}
+
+        .btn-go {
+            background-color: $header-bg-color;
+            position: absolute;
+            height: 35px;
+            width: 35px;
+            right: 8px;
+            line-height: 35px;
+            font-size: 12px;
+            pointer-events: auto;
+        }
+	}
+
+    .main-menu-btn {
+        padding: 10px;
+    }
+
+}
+

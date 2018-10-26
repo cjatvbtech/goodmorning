@@ -1,0 +1,293 @@
+.btn {
+    font-size: $btn-font-size;
+    background-color: $btn-bg-color;
+    color: $white;
+    border: 1px solid $btn-bg-color;
+    height: $buttonHeight;
+    line-height: $buttonHeight;
+    padding: 0 10px;
+    min-width: 75px;
+
+    @include border-radius(5px);
+    @include transition(300ms all ease-out);
+
+    span {
+        vertical-align: middle;
+    }
+
+    &.active, &:hover, &:focus {
+        background-color: darken($btn-bg-color, 10%);
+        border-color: darken($btn-bg-color, 10%);
+        color: $white;
+    }
+
+    &.btn-primary {
+        display: block;
+        width: 100%;
+        text-transform: uppercase;
+    }
+
+    &.btn-secondary {
+        display: block;
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+        text-transform: uppercase;
+    }
+
+    &.btn-progress {
+        background-image: url('../images/btn-spinner.svg');
+        background-position: 20px 50%;
+        background-repeat: no-repeat;
+    }
+
+    &.btn-block {
+        display: block;
+    }
+
+    &.btn-round-side {
+        @include border-radius-left(30px);
+        @include border-radius-right(30px);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    /* Sizes */
+    &.btn-sm, &.btn-md {
+        padding: 0 24px;
+    }
+
+    &.btn-xs {
+        height: $btn-xs-height;
+        line-height: $btn-xs-height - 1;
+        font-size: 12px;
+    }   
+
+    &.btn-sm {
+        height: $btn-sm-height;
+        line-height: $btn-sm-height - 1;
+        font-size: 14px;
+    }   
+
+    &.btn-md {
+        height: $btn-md-height;
+        line-height: $btn-md-height - 1;
+        font-size: 14px;
+    }
+
+
+    /* COLOR */
+    &.btn-orange {
+        border-color: $orange;
+        background-color: $orange;
+        &:hover {
+            border-color: darken($orange, 10%);
+            background-color: darken($orange, 10%);
+        }
+    }
+
+    &.btn-red {
+        border-color: $red;
+        background-color: $red;
+        &:hover, &:focus {
+            border-color: darken($red, 10%);
+            background-color: darken($red, 10%);
+        }
+    }
+    &.btn-gray {
+        border-color: $gray;
+        background-color: $gray;
+        &:hover {
+            border-color: darken($gray, 10%);
+            background-color: darken($gray, 10%);
+        }
+    }
+    &.btn-lightgray {
+        color: $black;
+        border-color: $lightgray;
+        background-color: $lightgray;
+
+        &:hover {
+            border-color: darken($lightgray, 10%);
+            background-color: darken($lightgray, 10%);
+        }
+    }
+    &.btn-yellow {
+        border-color: $yellow;
+        background-color: $yellow;
+
+        &:hover {
+            border-color: darken($yellow, 10%);
+            background-color: darken($yellow, 10%);
+        }
+    }
+
+    &.btn-disabled, &:disabled {
+        color: #lightgray;
+        border-color: $lightergray;
+        background-color: $lightergray;
+    }
+}
+
+.action-btns {
+    list-style: none;
+    padding: 0;
+    text-align: right;
+
+    li {
+        padding: 0 15px;
+        display: block;
+        float: left;
+        border-right: 1px solid #f3f3f3;
+
+        &:last-child { border-right: 0; }
+    }
+    a {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        padding: 7px 8px 5px 8px;
+        line-height: 1em;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #f0f0f8;
+            z-index: 0;
+
+            @include transition(all 250ms ease-out);
+            @include opacity(0);
+            @include border-radius(5px);
+            @include scale3d(0, 0, 0);
+
+        }
+
+        &:hover {
+            color: #101013;
+        }
+
+        i {
+            @include transition(all 250ms ease-out);
+        }
+
+        span, i {
+            position: relative;
+            z-index: 2;
+        }
+
+        &:hover:before, &.open:before, &[data-toggle="collapse"]:not(.collapsed):before {
+            @include opacity(1);
+            @include scale3d(1, 1, 1);
+        }
+
+        &.ico-btn {
+            text-align: center;
+            padding: 0;
+            height: 30px;
+            width: 30px;
+            line-height: 30px;
+            @include border-radius(50%);
+
+            i.lv-add-btn {
+                margin-top: 8px;
+            }
+
+            i.lv-chevron-right {
+                margin-top: 6px;
+            }
+        }
+    }
+}
+
+.btn-hover {
+    position: relative;
+    display: inline-block;
+    padding: 7px 8px 5px 8px;
+    line-height: 1em;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.2);
+        z-index: 0;
+
+        @include transition(all 200ms ease-out);
+        @include opacity(0);
+        @include border-radius(5px);
+        @include scale3d(0, 0, 0);
+
+    }
+
+    &:hover {
+        color: #1b1b20;
+    }
+
+    i {
+        @include transition(all 250ms ease-out);
+    }
+
+    span, i {
+        position: relative;
+    }
+
+    &:hover:before, &.open:before, &[data-toggle="collapse"]:not(.collapsed):before {
+        @include opacity(1);
+        @include scale3d(1, 1, 1);
+    }
+
+    &.btn-ico {
+        text-align: center;
+        padding: 0;/* 
+        height: 30px;
+        width: 30px;
+        line-height: 30px; */
+        /* overflow: hidden; */
+        @include border-radius(50%);
+
+        &:before {
+            left: 0; right: 0;
+            @include border-radius(50%);
+        }
+
+        i.fa, i.zmdi {
+            height: 100%;
+        }
+
+        i.lv-add-btn {
+            margin-top: 8px;
+        }
+
+        i.lv-chevron-right {
+            margin-top: 6px;
+        }
+
+        &.btn-lg {
+            padding-top: 2px;
+            height: 45px;
+            width: 45px;
+            line-height: 43px;
+        }
+    }
+}
+
+.list-action-btns {
+    margin-right: -10px;
+    margin-left: -10px;
+    margin-top: -10px;
+
+    > li {
+        padding-left: 10px;
+        padding-right: 10px;
+        vertical-align: middle;
+    }
+}

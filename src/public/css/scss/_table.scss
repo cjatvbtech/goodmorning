@@ -1,0 +1,40 @@
+.table {
+	thead>tr>th {
+		font-family: $gothambold;
+		color: $black;
+	}
+
+	>tbody>tr>td, tbody>tr>th, tfoot>tr>td, tfoot>tr>th, thead>tr>td, thead>tr>th {
+		border-top-color: $lightergray;
+	}
+
+	&.table-no-border {
+		>tbody>tr>td, tbody>tr>th, tfoot>tr>td, tfoot>tr>th, thead>tr>td, thead>tr>th {
+			border: 0;
+		}
+	}
+
+	&.table-specification {
+		>tbody>tr>td {
+			vertical-align: middle;
+			padding-top: 12px;
+			padding-bottom: 12px;
+
+			&:first-child {
+				font-size: 12px;
+			}
+
+			&:last-child  {
+				font-family: $gothammedium;
+				color: $blue;
+			}
+		}
+	}
+}
+
+
+.table-striped {
+	>tbody>tr:nth-of-type(odd) {
+		background-color: $lightestgray;
+	}
+}

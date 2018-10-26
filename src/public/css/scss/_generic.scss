@@ -1,0 +1,149 @@
+@for $i from 0 through 30 {
+    $x: $i * 5px;
+    $label: $i * 5;
+
+    /* MARGIN */
+    .m-#{$label} {
+        margin: $x !important;
+    }
+
+    .m-t-#{$label} {
+    	margin-top: $x !important;
+    }
+
+    .m-l-#{$label} {
+    	margin-left: $x !important;
+    }
+
+    .m-r-#{$label} {
+    	margin-right: $x !important;
+    }
+
+    .m-b-#{$label} {
+    	margin-bottom: $x !important;
+    }
+
+    /* PADDING */
+    .p-#{$label} {
+        padding: $x !important;
+    }
+
+    .p-t-#{$label} {
+    	padding-top: $x !important;
+    }
+
+    .p-l-#{$label} {
+    	padding-left: $x !important;
+    }
+
+    .p-r-#{$label} {
+    	padding-right: $x !important;
+    }
+
+    .p-b-#{$label} {
+    	padding-bottom: $x !important;
+    }
+}
+
+
+@for $i from 8 through 45 {
+	$size: $i * 1px;
+
+	.f-#{$i} {
+        font-size: $size !important;
+    }
+}
+
+@for $i from 11 through 30 {
+
+    .z-index-#{$i} {
+        z-index: $i !important;
+    }
+}
+
+@for $i from 1 through 3 {
+    .l-h-#{$i} {
+        line-height: $i !important;
+    }
+}
+
+.text-xs-left { text-align: left; }
+.text-xs-right { text-align: right; }
+.text-xs-center { text-align: center; }
+.text-xs-justify { text-align: justify; }
+
+@media (min-width: 768px) {
+    .text-sm-left { text-align: left; }
+    .text-sm-right { text-align: right; }
+    .text-sm-center { text-align: center; }
+    .text-sm-justify { text-align: justify; }
+}
+
+@media (min-width: 992px) {
+    .text-md-left { text-align: left; }
+    .text-md-right { text-align: right; }
+    .text-md-center { text-align: center; }
+    .text-md-justify { text-align: justify; }
+}
+
+@media (min-width: 1200px) {
+    .text-lg-left { text-align: left; }
+    .text-lg-right { text-align: right; }
+    .text-lg-center { text-align: center; }
+    .text-lg-justify { text-align: justify; }
+}
+
+/*
+ * Text transform
+ */
+.t-t-uppercase { text-transform: uppercase; }
+.t-t-lowercase { text-transform: lowercase; }
+.t-t-capitalize { text-transform: capitalize; }
+
+/*
+ * Vertical-alignment
+ */
+
+.va-middle { vertical-align: middle !important; }
+.va-top { vertical-align: top !important; }
+.va-bottom { vertical-align: bottom !important; }
+.va-sub { vertical-align: sub !important; }
+.va-baseline { vertical-align: baseline !important; }
+.va-text-bottom { vertical-align: text-bottom !important; }
+.va-text-top { vertical-align: text-top !important; }
+
+/*
+ * Position Classes
+ */
+.p-relative { position: relative !important; }
+.p-absolute { position: absolute !important; }
+.p-fixed { position: fixed !important; }
+.p-static { position: static !important; }
+
+/*
+ * Overflow
+ */
+.o-hidden { overflow: hidden !important; }
+.o-visible { overflow: visible !important; }
+.o-auto { overflow: auto !important; }
+
+/*
+ * Display
+ */
+.d-block { display: block !important; }
+.di-block { display: inline-block !important; } 
+
+.m-t-neg-10 {
+    margin-top: -10px;
+}
+
+.m-t-neg-15 {
+    margin-top: -15px;
+}
+
+.m-t-neg-20 {
+    margin-top: -20px;
+}
+
+.s-bold { font-weight: 600; }
+.bold { font-weight: 700; }

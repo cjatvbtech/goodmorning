@@ -1,0 +1,105 @@
+.content-block {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.control-notes {
+	line-height: 2em;
+	margin-top: 3px;
+}
+
+.avatar {
+	height: 50px;
+	width: 50px;
+	display: inline-block;
+}
+
+.account-blocks {
+	h3 {
+		padding: 5px 15px;
+		border-bottom: 1px solid $lightestgray;
+	}
+
+	h3, .account {
+		max-width: 750px;
+		margin: 0 auto;
+	}
+
+	.account {
+		width: 100%;
+		border-bottom: 1px solid $lightestgray;
+
+		> .d-tblcell {
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		.account-name {
+			color: $black;
+
+			small {
+				color: $gray;
+				display: block;
+			}
+		}
+
+		.account-setting {
+			font-size: 12px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+		.account-amount {
+			width: 140px;
+		}
+
+		.account-date {
+			color: $lightgray;
+			width: 105px;
+		}
+
+		.account-info {
+			width: 200px;
+		}
+
+		.account-chkbox {
+			width: 60px;
+		}
+
+		.account-radio {
+			width: 35px;
+		}
+
+		.account-select {
+			width: 150px;
+		}
+
+		.account-avatar {
+			width: 80px;
+		}
+
+		&:not(.no-padding) {
+			> span, > div {
+				&:first-child { padding-left: 15px; }
+				&:last-child { padding-right: 15px; }
+			}
+		}
+	}
+}
+
+.login-form {
+	padding: 0 15px 30px;
+	.logo-wrap {
+		padding: 14% 0 ;
+		text-align: center;
+
+		> img {
+			width: 51.733333333333333%;
+			margin: 0 auto;
+		}
+	}
+
+	.control-wrap {
+		padding: 0 10px;
+	}
+}
